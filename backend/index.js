@@ -1,6 +1,18 @@
 import Pokedex from 'pokedex-promise-v2';
-//const { Pool } = requires('pg');
+import { Pool } from 'pg';
+import dotenv from 'dotenv';
 
+dotenv.config();
+
+const pool = new Pool(
+    {
+        user: process.env.DB_USER, // Dein PostgreSQL-Benutzername
+        host: process.env.DB_HOST, // z. B. 'localhost'
+        database: process.env.DB_NAME, // Name deiner Datenbank
+        password: process.env.DB_PASSWORD, // Dein Passwort
+        port: process.env.DB_PORT, // Standardport für PostgreSQL
+    }
+);
 
 const P = new Pokedex();
 
@@ -12,23 +24,12 @@ const P = new Pokedex();
         console.log(error);
     }); */
 
-async () => {
+(async () => {
     try {
-        const bulbasaur = await P.getPokemonSpeciesByName(pokemonName);
+        const bulbasaur = await P.getPokemonSpeciesByName('bulbasaur');
         const bisasam = bulbasaur.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name;
         console.log(bisasam);
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten:', error);
     }
-}
-    
-
-/* const pg = require('pg');
-const client = new pg.Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'postgres',
-    password: 'postgres',
-    port: 5432,
-});
-client.connect(); */
+})();
