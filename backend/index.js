@@ -16,19 +16,29 @@ const pool = new Pool(
 
 const P = new Pokedex();
 
-/* P.getResource(['/api/v2/pokemon/1'])
-    .then((response) => {
-        console.log(response.json);
-    })
-    .catch((error) => {
-        console.log(error);
-    }); */
-
 (async () => {
     try {
-        const bulbasaur = await P.getPokemonSpeciesByName('bulbasaur');
-        const bisasam = bulbasaur.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name;
-        console.log(bisasam);
+        const interval = { limit: 151, offset: 0 };
+        P.getPokemonsList(interval)
+            .then(async (response) => {
+                //console.log(response.results[1].name);
+                for (let i = 0; i < 151; i++) {
+                    const original = await P.getPokemonSpeciesByName(response.results[i].name);
+                    const ger = original.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name;
+                    const pokemon = await P.getPokemonByName(response.results[i].name);
+                    const front_sprites_url = pokemon.sprites.front_default;
+                    const client = await pool.connect();
+                    try {
+                        await client.query('SET search_path TO "Pokedex";');
+                        await client.query('INSERT INTO pokemon (name, front_sprites) VALUES ($1, $2);', [ger, front_sprites_url]);
+                    } catch (error) {
+                        console.error('Fehler beim Abrufen der Pokémon-Daten:', error);
+                    } finally {
+                        client.release();
+                    }
+                }
+
+            });
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten:', error);
     }
