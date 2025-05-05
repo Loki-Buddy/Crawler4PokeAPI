@@ -84,8 +84,8 @@ const P = new Pokedex();
 
                     P.getTypeByName(typ)
                         .then((response) => {
-                            const german_name = response.names.filter((german_name) => german_name.language.name === 'de')[0].name;
-                            return german_name;
+                            const ger_Typname = response.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name;
+                            return ger_Typname;
                         })
                         .then(async (ger_Typname) => {
                             const client = await pool.connect();
