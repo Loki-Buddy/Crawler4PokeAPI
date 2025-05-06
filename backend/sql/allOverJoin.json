@@ -1,0 +1,1512 @@
+[
+  {
+    "pokemon_id": 1,
+    "pokemon_api_name": "bulbasaur",
+    "pokemon_ger_name": "Bisasam",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 6.9,
+    "pokemon_flavor_text": "Dieses Pokémon trägt von Geburt an einen Samen auf dem Rücken, der mit ihm keimt und wächst.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 2,
+    "pokemon_api_name": "ivysaur",
+    "pokemon_ger_name": "Bisaknosp",
+    "pokemon_height": 1,
+    "pokemon_weight": 13,
+    "pokemon_flavor_text": "Es trägt eine Knospe auf seinem Rücken. Nimmt es Nahrung zu sich, soll aus der Knospe eine große blühende Blume werden.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 3,
+    "pokemon_api_name": "venusaur",
+    "pokemon_ger_name": "Bisaflor",
+    "pokemon_height": 2,
+    "pokemon_weight": 100,
+    "pokemon_flavor_text": "Es spreizt die breiten Blätter seiner Blüte, um seinen Körper mit Sonnenenergie zu durchfluten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 4,
+    "pokemon_api_name": "charmander",
+    "pokemon_ger_name": "Glumanda",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 8.5,
+    "pokemon_flavor_text": "Die Flamme auf seiner Schweifspitze zeigt die Lebensenergie an. Ist es gesund, leuchtet sie hell.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 5,
+    "pokemon_api_name": "charmeleon",
+    "pokemon_ger_name": "Glutexo",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 19,
+    "pokemon_flavor_text": "Es schlägt im Kampf mit seinem Schwanz nach seinen Gegnern. Anschließend zerfetzt es die Gegner mit seinen scharfen Klauen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 6,
+    "pokemon_api_name": "charizard",
+    "pokemon_ger_name": "Glurak",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 90.5,
+    "pokemon_flavor_text": "Wenn dieses Pokémon einen Strahl glühenden Feuers speit, leuchtet seine Schwanzspitze auf.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    "typen": "Feuer, Flug"
+  },
+  {
+    "pokemon_id": 7,
+    "pokemon_api_name": "squirtle",
+    "pokemon_ger_name": "Schiggy",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 9,
+    "pokemon_flavor_text": "Es zieht sich in seinen Panzer zurück und greift dann mit Wasserstrahlen seine Gegner an.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 8,
+    "pokemon_api_name": "wartortle",
+    "pokemon_ger_name": "Schillok",
+    "pokemon_height": 1,
+    "pokemon_weight": 22.5,
+    "pokemon_flavor_text": "Bei Gefahr zieht dieses Pokémon seinen Kopf ein. Die Schwanzspitze ragt jedoch aus dem Panzer heraus.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 9,
+    "pokemon_api_name": "blastoise",
+    "pokemon_ger_name": "Turtok",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 85.5,
+    "pokemon_flavor_text": "Es begräbt seine Gegner mit seinem enormen Körpergewicht. Wenn es in einer aussichtslosen Lage steckt, zieht es sich in seinen Panzer zurück.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 10,
+    "pokemon_api_name": "caterpie",
+    "pokemon_ger_name": "Raupy",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 2.9,
+    "pokemon_flavor_text": "Als Schutz vor Feinden sondert es einen übel riechenden Gestank mit seinen Antennen ab.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+    "typen": "Käfer"
+  },
+  {
+    "pokemon_id": 11,
+    "pokemon_api_name": "metapod",
+    "pokemon_ger_name": "Safcon",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 9.9,
+    "pokemon_flavor_text": "Der stahlharte Panzer schützt seinen zarten Körper. Es wartet geduldig auf seine Entwicklung.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+    "typen": "Käfer"
+  },
+  {
+    "pokemon_id": 12,
+    "pokemon_api_name": "butterfree",
+    "pokemon_ger_name": "Smettbo",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 32,
+    "pokemon_flavor_text": "Es liebt Blütenhonig. Es findet selbst Blumen, die sehr wenig Pollen haben.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+    "typen": "Käfer, Flug"
+  },
+  {
+    "pokemon_id": 13,
+    "pokemon_api_name": "weedle",
+    "pokemon_ger_name": "Hornliu",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 3.2,
+    "pokemon_flavor_text": "Es lebt bevorzugt in Wäldern und in hohem Gras. Auf dem Kopf trägt es einen circa 5 cm langen, spitzen, giftigen Stachel.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+    "typen": "Käfer, Gift"
+  },
+  {
+    "pokemon_id": 14,
+    "pokemon_api_name": "kakuna",
+    "pokemon_ger_name": "Kokuna",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 10,
+    "pokemon_flavor_text": "Dieses Pokémon kann sich kaum bewegen. Bei drohender Gefahr verhärtet es seinen Panzer.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+    "typen": "Käfer, Gift"
+  },
+  {
+    "pokemon_id": 15,
+    "pokemon_api_name": "beedrill",
+    "pokemon_ger_name": "Bibor",
+    "pokemon_height": 1,
+    "pokemon_weight": 29.5,
+    "pokemon_flavor_text": "Dieses Pokémon verfügt über drei Giftstachel. Es kann seine Gegner damit wiederholt stechen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+    "typen": "Käfer, Gift"
+  },
+  {
+    "pokemon_id": 16,
+    "pokemon_api_name": "pidgey",
+    "pokemon_ger_name": "Taubsi",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 1.8,
+    "pokemon_flavor_text": "Ein vorwiegend in Wäldern lebendes Pokémon, das zur Verteidigung mit den Flügeln Sand aufwirbelt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 17,
+    "pokemon_api_name": "pidgeotto",
+    "pokemon_ger_name": "Tauboga",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Die Krallen an seinen Füßen sind sehr ausgeprägt. Es kann sogar ein Owei zu seinem Nest in 100 km Entfernung tragen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 18,
+    "pokemon_api_name": "pidgeot",
+    "pokemon_ger_name": "Tauboss",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 39.5,
+    "pokemon_flavor_text": "Dieses Pokémon schnellt bei der Jagd blitzschnell unter Wasser, um seine ahnungslose Beute zu fangen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 19,
+    "pokemon_api_name": "rattata",
+    "pokemon_ger_name": "Rattfratz",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 3.5,
+    "pokemon_flavor_text": "Es baut sein Nest, wo es Futter findet. Es ist den ganzen Tag auf der Suche nach etwas Essbarem.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 20,
+    "pokemon_api_name": "raticate",
+    "pokemon_ger_name": "Rattikarl",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 18.5,
+    "pokemon_flavor_text": "Es wetzt seine ständig wachsenden Zähne an harten Dingen. Es kann Wände aus Beton zernagen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 21,
+    "pokemon_api_name": "spearow",
+    "pokemon_ger_name": "Habitak",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 2,
+    "pokemon_flavor_text": "Es beschützt sein Gebiet stets vor Eindringlingen. Daher fliegt es ständig wild umher.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 22,
+    "pokemon_api_name": "fearow",
+    "pokemon_ger_name": "Ibitak",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 38,
+    "pokemon_flavor_text": "Mit seinen riesigen Flügeln kann dieses Pokémon nahezu pausenlos in der Luft bleiben.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 23,
+    "pokemon_api_name": "ekans",
+    "pokemon_ger_name": "Rettan",
+    "pokemon_height": 2,
+    "pokemon_weight": 6.9,
+    "pokemon_flavor_text": "Mit dem Alter wird der Körper dieses Pokémon immer länger. Es schläft um Äste gewickelt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 24,
+    "pokemon_api_name": "arbok",
+    "pokemon_ger_name": "Arbok",
+    "pokemon_height": 3.5,
+    "pokemon_weight": 65,
+    "pokemon_flavor_text": "Das Muster auf seinem Bauch ähnelt einer Fratze. Schwache Gegner nehmen bereits beim Anblick Reißaus.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 25,
+    "pokemon_api_name": "pikachu",
+    "pokemon_ger_name": "Pikachu",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 6,
+    "pokemon_flavor_text": "Es streckt seinen Schweif nach oben, um seine Umgebung zu prüfen. Häufig fährt ein Blitz hinein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 26,
+    "pokemon_api_name": "raichu",
+    "pokemon_ger_name": "Raichu",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Wenn es sich auflädt, zucken seine Muskeln und es wird aggressiver und kampflustiger.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 27,
+    "pokemon_api_name": "sandshrew",
+    "pokemon_ger_name": "Sandan",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 12,
+    "pokemon_flavor_text": "Es gräbt und lebt im Erdboden. Bei Gefahr rollt es sich zum Schutz zu einem Ball zusammen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 28,
+    "pokemon_api_name": "sandslash",
+    "pokemon_ger_name": "Sandamer",
+    "pokemon_height": 1,
+    "pokemon_weight": 29.5,
+    "pokemon_flavor_text": "Wenn es schnell gräbt, können seine Stacheln und Krallen abbrechen. Sie wachsen binnen eines Tages nach.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 29,
+    "pokemon_api_name": "nidoran-f",
+    "pokemon_ger_name": "Nidoran♀",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 7,
+    "pokemon_flavor_text": "Dieses Pokémon ist sehr klein, verfügt aber über starke Gifte. Das Weibchen hat ein kleineres Horn.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 30,
+    "pokemon_api_name": "nidorina",
+    "pokemon_ger_name": "Nidorina",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 20,
+    "pokemon_flavor_text": "Das Weibchen ist ausgeglichener. Es stößt Schreie im Ultraschallwellenbereich aus, die den Gegner verwirren können.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 31,
+    "pokemon_api_name": "nidoqueen",
+    "pokemon_ger_name": "Nidoqueen",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 60,
+    "pokemon_flavor_text": "Es benutzt seinen schuppigen Körper, um den Höhleneingang als Schutz für seine Jungen zu sperren.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+    "typen": "Gift, Boden"
+  },
+  {
+    "pokemon_id": 32,
+    "pokemon_api_name": "nidoran-m",
+    "pokemon_ger_name": "Nidoran♂",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 9,
+    "pokemon_flavor_text": "Es untersucht die Umgebung, indem es die Ohren spitzt und lauscht. Sein giftiges Horn schützt es.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 33,
+    "pokemon_api_name": "nidorino",
+    "pokemon_ger_name": "Nidorino",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 19.5,
+    "pokemon_flavor_text": "Es überwacht mit seinen riesigen Ohren die Umgebung. Registriert es eine Bewegung, greift es an.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 34,
+    "pokemon_api_name": "nidoking",
+    "pokemon_ger_name": "Nidoking",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 62,
+    "pokemon_flavor_text": "Seine steinharte Haut und sein ausgeprägtes Horn sind seine Markenzeichen. Achte auf das Horn, denn es enthält Gift.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+    "typen": "Gift, Boden"
+  },
+  {
+    "pokemon_id": 35,
+    "pokemon_api_name": "clefairy",
+    "pokemon_ger_name": "Piepi",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 7.5,
+    "pokemon_flavor_text": "Eine Ansammlung von Piepi bei Vollmond tanzen zu sehen, soll Freude verheißen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+    "typen": "Fee"
+  },
+  {
+    "pokemon_id": 36,
+    "pokemon_api_name": "clefable",
+    "pokemon_ger_name": "Pixi",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 40,
+    "pokemon_flavor_text": "Es kann eine Nadel hören, die in 1 km Entfernung zu Boden fällt. Es lebt in der Stille der Berge.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
+    "typen": "Fee"
+  },
+  {
+    "pokemon_id": 37,
+    "pokemon_api_name": "vulpix",
+    "pokemon_ger_name": "Vulpix",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 9.9,
+    "pokemon_flavor_text": "Dieses Pokémon hat bei seiner Geburt nur einen Schweif, der sich mit zunehmendem Alter aufspaltet.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 38,
+    "pokemon_api_name": "ninetales",
+    "pokemon_ger_name": "Vulnona",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 19.9,
+    "pokemon_flavor_text": "Es hat neun lange Schweife und sein Fell glänzt gülden. Man sagt, es soll 1 000 Jahre alt werden.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 39,
+    "pokemon_api_name": "jigglypuff",
+    "pokemon_ger_name": "Pummeluff",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 5.5,
+    "pokemon_flavor_text": "Es fesselt die Gegner mit seinen großen, runden Augen und versetzt sie in Schlaf, indem es eine beruhigende Melodie singt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+    "typen": "Normal, Fee"
+  },
+  {
+    "pokemon_id": 40,
+    "pokemon_api_name": "wigglytuff",
+    "pokemon_ger_name": "Knuddeluff",
+    "pokemon_height": 1,
+    "pokemon_weight": 12,
+    "pokemon_flavor_text": "Sein Fell ist so flauschig, dass, wenn zwei zusammenstehen, sie nicht getrennt werden möchten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
+    "typen": "Normal, Fee"
+  },
+  {
+    "pokemon_id": 41,
+    "pokemon_api_name": "zubat",
+    "pokemon_ger_name": "Zubat",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 7.5,
+    "pokemon_flavor_text": "Obwohl es keine Augen hat, kann es Hindernisse mithilfe von Ultraschallwellen wahrnehmen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
+    "typen": "Gift, Flug"
+  },
+  {
+    "pokemon_id": 42,
+    "pokemon_api_name": "golbat",
+    "pokemon_ger_name": "Golbat",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 55,
+    "pokemon_flavor_text": "Dieses Pokémon saugt dem Gegner selbst dann noch Energie ab, wenn es zu schwer zum Fliegen wird.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
+    "typen": "Gift, Flug"
+  },
+  {
+    "pokemon_id": 43,
+    "pokemon_api_name": "oddish",
+    "pokemon_ger_name": "Myrapla",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 5.4,
+    "pokemon_flavor_text": "Tagsüber versteckt es sich in der kalten Erde, um die Sonne zu meiden. Es wächst im Mondschein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 44,
+    "pokemon_api_name": "gloom",
+    "pokemon_ger_name": "Duflor",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 8.6,
+    "pokemon_flavor_text": "Dieses Pokémon sondert einen übelriechenden Geruch ab. Trotzdem halten einige Leute es im Haus.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 45,
+    "pokemon_api_name": "vileplume",
+    "pokemon_ger_name": "Giflor",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 18.6,
+    "pokemon_flavor_text": "Je größer die Blütenblätter, desto mehr giftige Pollen sind in der Blüte enthalten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 46,
+    "pokemon_api_name": "paras",
+    "pokemon_ger_name": "Paras",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 5.4,
+    "pokemon_flavor_text": "Auf seinem Rücken wachsen Pilze, die man Tochukaso nennt. Die Pilze wachsen mit ihrem Wirt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
+    "typen": "Käfer, Pflanze"
+  },
+  {
+    "pokemon_id": 47,
+    "pokemon_api_name": "parasect",
+    "pokemon_ger_name": "Parasek",
+    "pokemon_height": 1,
+    "pokemon_weight": 29.5,
+    "pokemon_flavor_text": "Parasek wird von einem Pilz, der größer als das Pokémon ist, kontrolliert. Er gibt Giftsporen ab.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
+    "typen": "Käfer, Pflanze"
+  },
+  {
+    "pokemon_id": 48,
+    "pokemon_api_name": "venonat",
+    "pokemon_ger_name": "Bluzuk",
+    "pokemon_height": 1,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Seine großen Augen bestehen aus vielen kleinen Augen. Nachts wird es von Licht angezogen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png",
+    "typen": "Käfer, Gift"
+  },
+  {
+    "pokemon_id": 49,
+    "pokemon_api_name": "venomoth",
+    "pokemon_ger_name": "Omot",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 12.5,
+    "pokemon_flavor_text": "Wer die von ihm verstreuten Schuppen berührt, wird gelähmt und muss sich setzen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+    "typen": "Käfer, Gift"
+  },
+  {
+    "pokemon_id": 50,
+    "pokemon_api_name": "diglett",
+    "pokemon_ger_name": "Digda",
+    "pokemon_height": 0.2,
+    "pokemon_weight": 0.8,
+    "pokemon_flavor_text": "Dieses Pokémon lebt 1 m unter der Erde. Es frisst Wurzeln und kommt selten an die Oberfläche.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 51,
+    "pokemon_api_name": "dugtrio",
+    "pokemon_ger_name": "Digdri",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 33.3,
+    "pokemon_flavor_text": "Im Kampf gräbt es sich ein und attackiert den Gegner aus einer unvorhersehbaren Richtung.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 52,
+    "pokemon_api_name": "meowth",
+    "pokemon_ger_name": "Mauzi",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 4.2,
+    "pokemon_flavor_text": "Ein nachtaktives Pokémon. Sieht es etwas Schimmerndes, fangen seine Augen an zu glänzen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 53,
+    "pokemon_api_name": "persian",
+    "pokemon_ger_name": "Snobilikat",
+    "pokemon_height": 1,
+    "pokemon_weight": 32,
+    "pokemon_flavor_text": "Dieses Pokémon hat sehr schönes Fell. Es ist jedoch ein schwer erziehbares Haustier.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 54,
+    "pokemon_api_name": "psyduck",
+    "pokemon_ger_name": "Enton",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 19.6,
+    "pokemon_flavor_text": "Es wird permanent von Kopfschmerzen geplagt. Wird der Schmerz stärker, setzt es geheimnisvolle Kräfte ein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 55,
+    "pokemon_api_name": "golduck",
+    "pokemon_ger_name": "Entoron",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 76.6,
+    "pokemon_flavor_text": "An seinen langen, dünnen Gliedmaßen befinden sich Schwimmflossen. Mit diesen kann es anmutig durch Seen schwimmen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 56,
+    "pokemon_api_name": "mankey",
+    "pokemon_ger_name": "Menki",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 28,
+    "pokemon_flavor_text": "Da es grundlos angreift und nicht zwischen Freund oder Feind unterscheidet, ist es sehr gefährlich.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 57,
+    "pokemon_api_name": "primeape",
+    "pokemon_ger_name": "Rasaff",
+    "pokemon_height": 1,
+    "pokemon_weight": 32,
+    "pokemon_flavor_text": "In ganz seltenen Fällen beruhigt sich dieses sehr jähzornige Pokémon und ist für einen Moment friedlich.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 58,
+    "pokemon_api_name": "growlithe",
+    "pokemon_ger_name": "Fukano",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 19,
+    "pokemon_flavor_text": "Es ist sehr freundlich und bleibt den Menschen treu. Durch Bellen und Beißen versucht es, Gegner zu verscheuchen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 59,
+    "pokemon_api_name": "arcanine",
+    "pokemon_ger_name": "Arkani",
+    "pokemon_height": 1.9,
+    "pokemon_weight": 155,
+    "pokemon_flavor_text": "Dieses Pokémon trägt ein wunderschönes Fell. Es ist obendrein schnell und sehr wendig.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 60,
+    "pokemon_api_name": "poliwag",
+    "pokemon_ger_name": "Quapsel",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 12.4,
+    "pokemon_flavor_text": "Seine glatte, schwarze Haut ist dünn und feucht. Teilweise sind seine Innereien als spiralförmige Muster sichtbar.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 61,
+    "pokemon_api_name": "poliwhirl",
+    "pokemon_ger_name": "Quaputzi",
+    "pokemon_height": 1,
+    "pokemon_weight": 20,
+    "pokemon_flavor_text": "Dieses Pokémon kann im Wasser und auch an Land leben. An Land schwitzt es sich den Körper nass.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 62,
+    "pokemon_api_name": "poliwrath",
+    "pokemon_ger_name": "Quappo",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 54,
+    "pokemon_flavor_text": "Es hat extrem starke Muskeln und kann durch den Ozean schwimmen, ohne sich ausruhen zu müssen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+    "typen": "Wasser, Kampf"
+  },
+  {
+    "pokemon_id": 63,
+    "pokemon_api_name": "abra",
+    "pokemon_ger_name": "Abra",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 19.5,
+    "pokemon_flavor_text": "Es schläft 18 Stunden am Tag. Währenddessen setzt es eine Vielzahl zusätzlicher sensorischer Kräfte ein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 64,
+    "pokemon_api_name": "kadabra",
+    "pokemon_ger_name": "Kadabra",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 56.5,
+    "pokemon_flavor_text": "Viele seltsame Dinge passieren, wenn ein Kadabra in der Nähe ist. Uhren laufen zum Beispiel rückwärts.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 65,
+    "pokemon_api_name": "alakazam",
+    "pokemon_ger_name": "Simsala",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 48,
+    "pokemon_flavor_text": "Seine Gehirnzellen vervielfachen sich sein ganzes Leben lang. Daher kann es sich immer an alles erinnern.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 66,
+    "pokemon_api_name": "machop",
+    "pokemon_ger_name": "Machollo",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 19.5,
+    "pokemon_flavor_text": "Es hebt Georok hoch, um seinen Körper zu trainieren. Außerdem übt es sich in jeder Art von Kampfsport.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 67,
+    "pokemon_api_name": "machoke",
+    "pokemon_ger_name": "Maschock",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 70.5,
+    "pokemon_flavor_text": "Dieses Pokémon ist superstark. Es kann sich nur mit einem Kraft regulierenden Gürtel bewegen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 68,
+    "pokemon_api_name": "machamp",
+    "pokemon_ger_name": "Machomei",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 130,
+    "pokemon_flavor_text": "Seine markigen Arme können innerhalb von nur zwei Sekunden 1 000 Schläge verteilen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 69,
+    "pokemon_api_name": "bellsprout",
+    "pokemon_ger_name": "Knofensa",
+    "pokemon_height": 0.7,
+    "pokemon_weight": 4,
+    "pokemon_flavor_text": "Obwohl sein Körper sehr schmal ist, schnappt es blitzschnell nach Beute.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 70,
+    "pokemon_api_name": "weepinbell",
+    "pokemon_ger_name": "Ultrigaria",
+    "pokemon_height": 1,
+    "pokemon_weight": 6.4,
+    "pokemon_flavor_text": "Die Blätter werden eingesetzt, um Gegner aufzuschlitzen. Dieses Pokémon spuckt eine Flüssigkeit, die alles auflöst.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 71,
+    "pokemon_api_name": "victreebel",
+    "pokemon_ger_name": "Sarzenia",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 15.5,
+    "pokemon_flavor_text": "Dieses Pokémon soll in großen Kolonien tief im Dschungel leben, doch niemand kann dies bestätigen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+    "typen": "Pflanze, Gift"
+  },
+  {
+    "pokemon_id": 72,
+    "pokemon_api_name": "tentacool",
+    "pokemon_ger_name": "Tentacha",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 45.5,
+    "pokemon_flavor_text": "Sein Körper besteht aus Wasser. Aus seinen kristallartigen Augen verschießt es eigenartige Strahlen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png",
+    "typen": "Wasser, Gift"
+  },
+  {
+    "pokemon_id": 73,
+    "pokemon_api_name": "tentacruel",
+    "pokemon_ger_name": "Tentoxa",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 55,
+    "pokemon_flavor_text": "Dieses Pokémon kann die Tentakel bei der Jagd ausfahren, um die Beute leichter zu fangen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
+    "typen": "Wasser, Gift"
+  },
+  {
+    "pokemon_id": 74,
+    "pokemon_api_name": "geodude",
+    "pokemon_ger_name": "Kleinstein",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 20,
+    "pokemon_flavor_text": "Wanderer stolpern in den Bergen häufig über dieses Pokémon, da es wie ein Stein aussieht.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+    "typen": "Gestein, Boden"
+  },
+  {
+    "pokemon_id": 75,
+    "pokemon_api_name": "graveler",
+    "pokemon_ger_name": "Georok",
+    "pokemon_height": 1,
+    "pokemon_weight": 105,
+    "pokemon_flavor_text": "Es ist ihm völlig gleichgültig, wenn Stücke aus ihm herausbrechen, während es Berge hinabrollt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png",
+    "typen": "Gestein, Boden"
+  },
+  {
+    "pokemon_id": 76,
+    "pokemon_api_name": "golem",
+    "pokemon_ger_name": "Geowaz",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 300,
+    "pokemon_flavor_text": "Sie rollen Berge hinunter und hinterlassen Spurrillen. Halte dich von diesen Rillen fern.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png",
+    "typen": "Gestein, Boden"
+  },
+  {
+    "pokemon_id": 77,
+    "pokemon_api_name": "ponyta",
+    "pokemon_ger_name": "Ponita",
+    "pokemon_height": 1,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Neugeboren kann es kaum stehen. Durch das Galoppieren werden seine Beine aber schneller und kräftiger.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 78,
+    "pokemon_api_name": "rapidash",
+    "pokemon_ger_name": "Gallopa",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 95,
+    "pokemon_flavor_text": "Dieses Pokémon verfolgt schnelle Objekte in der Hoffnung, ein Wettrennen gegen sie zu gewinnen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 79,
+    "pokemon_api_name": "slowpoke",
+    "pokemon_ger_name": "Flegmon",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 36,
+    "pokemon_flavor_text": "Es faulenzt am Wasser. Wenn es in den Schweif gebissen wird, bemerkt es das erst am nächsten Tag.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png",
+    "typen": "Wasser, Psycho"
+  },
+  {
+    "pokemon_id": 80,
+    "pokemon_api_name": "slowbro",
+    "pokemon_ger_name": "Lahmus",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 78.5,
+    "pokemon_flavor_text": "Das Muschas an seiner Rute lässt nicht locker, da ein leckerer Geschmack aus seiner Rute strömt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
+    "typen": "Wasser, Psycho"
+  },
+  {
+    "pokemon_id": 81,
+    "pokemon_api_name": "magnemite",
+    "pokemon_ger_name": "Magnetilo",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 6,
+    "pokemon_flavor_text": "Die Magneten an seinem Körper erzeugen ein Antigravitationsfeld, um es ständig in der Schwebe zu halten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+    "typen": "Elektro, Stahl"
+  },
+  {
+    "pokemon_id": 82,
+    "pokemon_api_name": "magneton",
+    "pokemon_ger_name": "Magneton",
+    "pokemon_height": 1,
+    "pokemon_weight": 60,
+    "pokemon_flavor_text": "Schließen sich mehrere Magnetilo zusammen, entsteht dieses Pokémon. Es entlädt kräftige Hochspannungsmagnetwellen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+    "typen": "Elektro, Stahl"
+  },
+  {
+    "pokemon_id": 83,
+    "pokemon_api_name": "farfetchd",
+    "pokemon_ger_name": "Porenta",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 15,
+    "pokemon_flavor_text": "Dieses Pokémon nutzt eine Lauchstange als Waffe. Es setzt sie wie ein Schwert ein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 84,
+    "pokemon_api_name": "doduo",
+    "pokemon_ger_name": "Dodu",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 39.2,
+    "pokemon_flavor_text": "Dieses zweiköpfige Pokémon gilt als plötzliche Mutation. Es rennt bis zu 100 km/h schnell.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 85,
+    "pokemon_api_name": "dodrio",
+    "pokemon_ger_name": "Dodri",
+    "pokemon_height": 1.8,
+    "pokemon_weight": 85.2,
+    "pokemon_flavor_text": "Lässt ein Feind auch nur einen der drei Köpfe für nur eine Sekunde aus den Augen, wird er sofort gepickt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png",
+    "typen": "Normal, Flug"
+  },
+  {
+    "pokemon_id": 86,
+    "pokemon_api_name": "seel",
+    "pokemon_ger_name": "Jurob",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 90,
+    "pokemon_flavor_text": "Dieses Pokémon lebt auf Eisbergen. Es schwimmt im Eiswasser und bricht das Eis mithilfe seines Horns.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 87,
+    "pokemon_api_name": "dewgong",
+    "pokemon_ger_name": "Jugong",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 120,
+    "pokemon_flavor_text": "Sein Körper ist mit reinem, weißem Fell überzogen. Je kälter es wird, desto aktiver wird dieses Pokémon.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+    "typen": "Wasser, Eis"
+  },
+  {
+    "pokemon_id": 88,
+    "pokemon_api_name": "grimer",
+    "pokemon_ger_name": "Sleima",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Schlamm, der Röntgenstrahlung vom Mond ausgesetzt war, wurde zu Sleima. Es isst am liebsten dreckige Dinge.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 89,
+    "pokemon_api_name": "muk",
+    "pokemon_ger_name": "Sleimok",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Sie treffen sich an stinkenden Orten, an denen der Schleim sich türmt. Dies merkt man am Gestank.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 90,
+    "pokemon_api_name": "shellder",
+    "pokemon_ger_name": "Muschas",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 4,
+    "pokemon_flavor_text": "Eine harte Schale schützt dieses Pokémon. Nur wenn es diese öffnet, wird es verwundbar.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 91,
+    "pokemon_api_name": "cloyster",
+    "pokemon_ger_name": "Austos",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 132.5,
+    "pokemon_flavor_text": "Austos, die im Meer mit starker Strömung leben, werden groß und entwickeln scharfe Stacheln.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png",
+    "typen": "Wasser, Eis"
+  },
+  {
+    "pokemon_id": 92,
+    "pokemon_api_name": "gastly",
+    "pokemon_ger_name": "Nebulak",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 0.1,
+    "pokemon_flavor_text": "Es hat einen gasförmigen Körper. Es kann jeden Gegner mit Giftgas einnebeln und dadurch ersticken.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+    "typen": "Geist, Gift"
+  },
+  {
+    "pokemon_id": 93,
+    "pokemon_api_name": "haunter",
+    "pokemon_ger_name": "Alpollo",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 0.1,
+    "pokemon_flavor_text": "Falls du im Dunkeln das Gefühl hast, beobachtet zu werden und niemand ist zu sehen, ist es bestimmt Alpollo.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+    "typen": "Geist, Gift"
+  },
+  {
+    "pokemon_id": 94,
+    "pokemon_api_name": "gengar",
+    "pokemon_ger_name": "Gengar",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 40.5,
+    "pokemon_flavor_text": "Es versteckt sich im Schatten. Man sagt, wenn sich ein Gengar versteckt, kühlt es sich um 5 °C ab.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+    "typen": "Geist, Gift"
+  },
+  {
+    "pokemon_id": 95,
+    "pokemon_api_name": "onix",
+    "pokemon_ger_name": "Onix",
+    "pokemon_height": 8.8,
+    "pokemon_weight": 210,
+    "pokemon_flavor_text": "Dieses Pokémon gräbt auf seiner Suche nach Futter lange Tunnel, in denen sich später Digda einnisten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+    "typen": "Gestein, Boden"
+  },
+  {
+    "pokemon_id": 96,
+    "pokemon_api_name": "drowzee",
+    "pokemon_ger_name": "Traumato",
+    "pokemon_height": 1,
+    "pokemon_weight": 32.4,
+    "pokemon_flavor_text": "Traumato versetzt Gegner in den Schlaf und frisst deren Träume. Von Alpträumen wird ihm aber übel.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 97,
+    "pokemon_api_name": "hypno",
+    "pokemon_ger_name": "Hypno",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 75.6,
+    "pokemon_flavor_text": "Es trägt ein Pendel. Man berichtet von einem Vorfall, bei dem es ein Kind mitnahm, das es zuvor hypnotisiert hatte.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 98,
+    "pokemon_api_name": "krabby",
+    "pokemon_ger_name": "Krabby",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 6.5,
+    "pokemon_flavor_text": "Wittert es Gefahr, hüllt es sich in Blasen aus seinem Maul, um größer zu erscheinen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 99,
+    "pokemon_api_name": "kingler",
+    "pokemon_ger_name": "Kingler",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 60,
+    "pokemon_flavor_text": "Die Kraft seiner großen und harten Schere entspricht 10 000 PS. Durch die Größe ist sie aber auch äußerst unhandlich und sperrig.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 100,
+    "pokemon_api_name": "voltorb",
+    "pokemon_ger_name": "Voltobal",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 10.4,
+    "pokemon_flavor_text": "Es wurde entdeckt, als man Pokébälle einführte. Es scheint, als gäbe es da einen Zusammenhang.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 101,
+    "pokemon_api_name": "electrode",
+    "pokemon_ger_name": "Lektrobal",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 66.6,
+    "pokemon_flavor_text": "Es explodiert schon bei kleinsten Reizen. Sein Spitzname „Die Bombenkugel“ spiegelt die Furcht der Menschen wider.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 102,
+    "pokemon_api_name": "exeggcute",
+    "pokemon_ger_name": "Owei",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 2.5,
+    "pokemon_flavor_text": "Die sechs Eier kommunizieren telepathisch. Werden sie getrennt, finden sie sich schnell wieder.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png",
+    "typen": "Pflanze, Psycho"
+  },
+  {
+    "pokemon_id": 103,
+    "pokemon_api_name": "exeggutor",
+    "pokemon_ger_name": "Kokowei",
+    "pokemon_height": 2,
+    "pokemon_weight": 120,
+    "pokemon_flavor_text": "Seine drei Köpfe denken unabhängig voneinander. Dennoch sind sie nett zueinander und streiten nie.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png",
+    "typen": "Pflanze, Psycho"
+  },
+  {
+    "pokemon_id": 104,
+    "pokemon_api_name": "cubone",
+    "pokemon_ger_name": "Tragosso",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 6.5,
+    "pokemon_flavor_text": "Es trägt den Schädel seiner verstorbenen Mutter auf seinem Kopf. Fühlt es sich einsam, soll es laut weinen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 105,
+    "pokemon_api_name": "marowak",
+    "pokemon_ger_name": "Knogga",
+    "pokemon_height": 1,
+    "pokemon_weight": 45,
+    "pokemon_flavor_text": "Es ist klein und war ursprünglich sehr schwach. Erst als es anfing Knochen einzusetzen, wurde es wild.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png",
+    "typen": "Boden"
+  },
+  {
+    "pokemon_id": 106,
+    "pokemon_api_name": "hitmonlee",
+    "pokemon_ger_name": "Kicklee",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 49.8,
+    "pokemon_flavor_text": "Die Beine ziehen und strecken sich unabhängig voneinander. Mit seinen dehnbaren Beinen kann es einen entfernten Gegner treffen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 107,
+    "pokemon_api_name": "hitmonchan",
+    "pokemon_ger_name": "Nockchan",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 50.2,
+    "pokemon_flavor_text": "Die Schläge, die es austeilt, können Beton pulverisieren. Es muss sich im Kampf alle drei Minuten ausruhen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png",
+    "typen": "Kampf"
+  },
+  {
+    "pokemon_id": 108,
+    "pokemon_api_name": "lickitung",
+    "pokemon_ger_name": "Schlurp",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 65.5,
+    "pokemon_flavor_text": "Seine Zunge ist mit klebrigem Speichel bedeckt, der überall haftet. Dies ist sehr nützlich.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 109,
+    "pokemon_api_name": "koffing",
+    "pokemon_ger_name": "Smogon",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 1,
+    "pokemon_flavor_text": "Sein dünner, ballonartiger Körper ist mit schrecklichem Giftgas gefüllt. Es verbreitet einen heftigen Gestank, wenn es in der Nähe ist.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 110,
+    "pokemon_api_name": "weezing",
+    "pokemon_ger_name": "Smogmog",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 9.5,
+    "pokemon_flavor_text": "Pumpt sich eines der zwei Smogon auf, lässt das andere Luft ab. So findet ein Giftgasaustausch statt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+    "typen": "Gift"
+  },
+  {
+    "pokemon_id": 111,
+    "pokemon_api_name": "rhyhorn",
+    "pokemon_ger_name": "Rihorn",
+    "pokemon_height": 1,
+    "pokemon_weight": 115,
+    "pokemon_flavor_text": "Stark, aber nicht allzu klug, kann dieses Pokémon sogar Hochhäuser mit seinem Tackle-Angriff zum Einsturz bringen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+    "typen": "Boden, Gestein"
+  },
+  {
+    "pokemon_id": 112,
+    "pokemon_api_name": "rhydon",
+    "pokemon_ger_name": "Rizeros",
+    "pokemon_height": 1.9,
+    "pokemon_weight": 120,
+    "pokemon_flavor_text": "Durch seine panzerähnliche Körperhülle kann es in bis zu 2 000 °C heißer Lava leben.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+    "typen": "Boden, Gestein"
+  },
+  {
+    "pokemon_id": 113,
+    "pokemon_api_name": "chansey",
+    "pokemon_ger_name": "Chaneira",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 34.6,
+    "pokemon_flavor_text": "Man sagt, es bringe Glück. Es ist sehr mitfühlend und teilt seine Eier mit Verletzten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 114,
+    "pokemon_api_name": "tangela",
+    "pokemon_ger_name": "Tangela",
+    "pokemon_height": 1,
+    "pokemon_weight": 35,
+    "pokemon_flavor_text": "Aufgrund der Ranken, die seinen Körper bedecken, kennt keiner seine wahre Form. Die blauen Ranken wachsen immer weiter.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+    "typen": "Pflanze"
+  },
+  {
+    "pokemon_id": 115,
+    "pokemon_api_name": "kangaskhan",
+    "pokemon_ger_name": "Kangama",
+    "pokemon_height": 2.2,
+    "pokemon_weight": 80,
+    "pokemon_flavor_text": "Sein Nachwuchs wächst in seinem Beutel heran. Nur wenn es sicher ist, darf das Junge aus dem Beutel.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 116,
+    "pokemon_api_name": "horsea",
+    "pokemon_ger_name": "Seeper",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 8,
+    "pokemon_flavor_text": "Dieses Pokémon schießt mit Tinte auf über der Wasseroberfläche fliegende Insekten.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 117,
+    "pokemon_api_name": "seadra",
+    "pokemon_ger_name": "Seemon",
+    "pokemon_height": 1.2,
+    "pokemon_weight": 25,
+    "pokemon_flavor_text": "Sein Körper ist mit scharfen Stacheln gespickt. Wenn man sorglos ist und es berührt, kann man durch die Stacheln bewusstlos werden.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 118,
+    "pokemon_api_name": "goldeen",
+    "pokemon_ger_name": "Goldini",
+    "pokemon_height": 0.6,
+    "pokemon_weight": 15,
+    "pokemon_flavor_text": "Es schwimmt mit fünf Knoten. Wird es angegriffen, wehrt es sich mit seinem scharfen Horn.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 119,
+    "pokemon_api_name": "seaking",
+    "pokemon_ger_name": "Golking",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 39,
+    "pokemon_flavor_text": "Im Herbst, zur Paarungszeit, sieht man diese Pokémon kraftvoll Bäche und Flüsse hinaufschwimmen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 120,
+    "pokemon_api_name": "staryu",
+    "pokemon_ger_name": "Sterndu",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 34.5,
+    "pokemon_flavor_text": "Auch wenn sein Körper nicht mehr intakt ist, kann es sich regenerieren, wenn der Kern leuchtet.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 121,
+    "pokemon_api_name": "starmie",
+    "pokemon_ger_name": "Starmie",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 80,
+    "pokemon_flavor_text": "Der Kern dieses Pokémon leuchtet in den Farben des Regenbogens. Sein Kern gilt als Edelstein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+    "typen": "Wasser, Psycho"
+  },
+  {
+    "pokemon_id": 122,
+    "pokemon_api_name": "mr-mime",
+    "pokemon_ger_name": "Pantimos",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 54.5,
+    "pokemon_flavor_text": "Seine Fingerspitzen sondern etwas ab, das die Luft zu einer schützenden Wand werden lässt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+    "typen": "Psycho, Fee"
+  },
+  {
+    "pokemon_id": 123,
+    "pokemon_api_name": "scyther",
+    "pokemon_ger_name": "Sichlor",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 56,
+    "pokemon_flavor_text": "Es zerreißt und zerkleinert seine Beute mit seinen unglaublich scharfen Sicheln. Selten breitet es seine Flügel aus, um zu fliegen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+    "typen": "Käfer, Flug"
+  },
+  {
+    "pokemon_id": 124,
+    "pokemon_api_name": "jynx",
+    "pokemon_ger_name": "Rossana",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 40.6,
+    "pokemon_flavor_text": "Der beschwingte Gang dieses Pokémon bezaubert Zuschauer und lässt sie im Takt dazu tanzen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png",
+    "typen": "Eis, Psycho"
+  },
+  {
+    "pokemon_id": 125,
+    "pokemon_api_name": "electabuzz",
+    "pokemon_ger_name": "Elektek",
+    "pokemon_height": 1.1,
+    "pokemon_weight": 30,
+    "pokemon_flavor_text": "Elektrizität bedeckt seinen Körper. Im Dunkeln erstrahlt es in einem bläulichen Ton.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 126,
+    "pokemon_api_name": "magmar",
+    "pokemon_ger_name": "Magmar",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 44.5,
+    "pokemon_flavor_text": "Es wurde in der Nähe eines Vulkans gefunden. Die Körpertemperatur dieses Feuerspuckers liegt bei fast 1 200 °C.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 127,
+    "pokemon_api_name": "pinsir",
+    "pokemon_ger_name": "Pinsir",
+    "pokemon_height": 1.5,
+    "pokemon_weight": 55,
+    "pokemon_flavor_text": "Es hält seine Beute mit seiner Zange fest und teilt sie dann. Was es nicht teilen kann, wirft es fort.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png",
+    "typen": "Käfer"
+  },
+  {
+    "pokemon_id": 128,
+    "pokemon_api_name": "tauros",
+    "pokemon_ger_name": "Tauros",
+    "pokemon_height": 1.4,
+    "pokemon_weight": 88.4,
+    "pokemon_flavor_text": "Es kämpft mit vollem Einsatz, nachdem es sich mit seinen drei Schweifen auspeitschte, um sich anzustacheln.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 129,
+    "pokemon_api_name": "magikarp",
+    "pokemon_ger_name": "Karpador",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 10,
+    "pokemon_flavor_text": "Es ist nutzlos, was Kraft und Geschwindigkeit angeht. Dieses ist das schwächste und erbärmlichste Pokémon der Welt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 130,
+    "pokemon_api_name": "gyarados",
+    "pokemon_ger_name": "Garados",
+    "pokemon_height": 6.5,
+    "pokemon_weight": 235,
+    "pokemon_flavor_text": "In alten Schriften wird von einem Garados berichtet, das in einem Wutanfall ein Dorf zerstörte.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
+    "typen": "Wasser, Flug"
+  },
+  {
+    "pokemon_id": 131,
+    "pokemon_api_name": "lapras",
+    "pokemon_ger_name": "Lapras",
+    "pokemon_height": 2.5,
+    "pokemon_weight": 220,
+    "pokemon_flavor_text": "Sie sind gutmütig. Da sie selten kämpfen, wurden sie oft gefangen. Ihre Anzahl ist stark reduziert.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+    "typen": "Wasser, Eis"
+  },
+  {
+    "pokemon_id": 132,
+    "pokemon_api_name": "ditto",
+    "pokemon_ger_name": "Ditto",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 4,
+    "pokemon_flavor_text": "Es kann seine Zellstruktur so verändern, dass es sich in alles verwandeln kann, was es sieht.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 133,
+    "pokemon_api_name": "eevee",
+    "pokemon_ger_name": "Evoli",
+    "pokemon_height": 0.3,
+    "pokemon_weight": 6.5,
+    "pokemon_flavor_text": "Ein seltenes Pokémon, das sich seiner Umgebung anpasst, indem es sich in unterschiedliche Formen entwickelt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 134,
+    "pokemon_api_name": "vaporeon",
+    "pokemon_ger_name": "Aquana",
+    "pokemon_height": 1,
+    "pokemon_weight": 29,
+    "pokemon_flavor_text": "Es liebt schöne Ufer. Da seine Zellstruktur Wassermolekülen ähnlich ist, kann es mit Wasser verschmelzen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png",
+    "typen": "Wasser"
+  },
+  {
+    "pokemon_id": 135,
+    "pokemon_api_name": "jolteon",
+    "pokemon_ger_name": "Blitza",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 24.5,
+    "pokemon_flavor_text": "Lädt es sich mit Elektrizität auf, steht jedes einzelne seiner Körperhaare steil nach oben.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png",
+    "typen": "Elektro"
+  },
+  {
+    "pokemon_id": 136,
+    "pokemon_api_name": "flareon",
+    "pokemon_ger_name": "Flamara",
+    "pokemon_height": 0.9,
+    "pokemon_weight": 25,
+    "pokemon_flavor_text": "In seinem Körper befindet sich eine Flamme. Seine Körpertemperatur liegt vor dem Kampf bei 900 °C.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png",
+    "typen": "Feuer"
+  },
+  {
+    "pokemon_id": 137,
+    "pokemon_api_name": "porygon",
+    "pokemon_ger_name": "Porygon",
+    "pokemon_height": 0.8,
+    "pokemon_weight": 36.5,
+    "pokemon_flavor_text": "Ein künstlich produziertes Pokémon, welches das Ergebnis von Forschungen ist. Es ist simpel aufgebaut.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 138,
+    "pokemon_api_name": "omanyte",
+    "pokemon_ger_name": "Amonitas",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 7.5,
+    "pokemon_flavor_text": "Ein prähistorisches Pokémon, das zur Urzeit im Wasser lebte. Es schwimmt, indem es seine zehn Tentakel bewegt.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png",
+    "typen": "Gestein, Wasser"
+  },
+  {
+    "pokemon_id": 139,
+    "pokemon_api_name": "omastar",
+    "pokemon_ger_name": "Amoroso",
+    "pokemon_height": 1,
+    "pokemon_weight": 35,
+    "pokemon_flavor_text": "Seine Tentakel sind hoch entwickelt und es setzt sie ähnlich Händen und Füßen ein. Sobald es Beute ergriffen hat, beißt es zu.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png",
+    "typen": "Gestein, Wasser"
+  },
+  {
+    "pokemon_id": 140,
+    "pokemon_api_name": "kabuto",
+    "pokemon_ger_name": "Kabuto",
+    "pokemon_height": 0.5,
+    "pokemon_weight": 11.5,
+    "pokemon_flavor_text": "Man geht davon aus, dass dieses Pokémon vor 300 Millionen Jahren die Strände bevölkerte.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png",
+    "typen": "Gestein, Wasser"
+  },
+  {
+    "pokemon_id": 141,
+    "pokemon_api_name": "kabutops",
+    "pokemon_ger_name": "Kabutops",
+    "pokemon_height": 1.3,
+    "pokemon_weight": 40.5,
+    "pokemon_flavor_text": "Im Wasser zieht es seine Beine an und bewegt seinen Panzer, um so schneller schwimmen zu können.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png",
+    "typen": "Gestein, Wasser"
+  },
+  {
+    "pokemon_id": 142,
+    "pokemon_api_name": "aerodactyl",
+    "pokemon_ger_name": "Aerodactyl",
+    "pokemon_height": 1.8,
+    "pokemon_weight": 59,
+    "pokemon_flavor_text": "In Bernstein eingeschlossenes genetisches Material eines Dinosauriers war der Ursprung dieses Pokémon. Beim Fliegen schreit es schrill.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png",
+    "typen": "Gestein, Flug"
+  },
+  {
+    "pokemon_id": 143,
+    "pokemon_api_name": "snorlax",
+    "pokemon_ger_name": "Relaxo",
+    "pokemon_height": 2.1,
+    "pokemon_weight": 460,
+    "pokemon_flavor_text": "Es ist erst satt, wenn es über 400 kg Nahrung am Tag gefressen hat. Ist es mit dem Essen fertig, schläft es sofort ein.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    "typen": "Normal"
+  },
+  {
+    "pokemon_id": 144,
+    "pokemon_api_name": "articuno",
+    "pokemon_ger_name": "Arktos",
+    "pokemon_height": 1.7,
+    "pokemon_weight": 55.4,
+    "pokemon_flavor_text": "Ein Legendäres Vogel-Pokémon. Es kann Blizzards verursachen, indem es Feuchtigkeit gefriert.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+    "typen": "Eis, Flug"
+  },
+  {
+    "pokemon_id": 145,
+    "pokemon_api_name": "zapdos",
+    "pokemon_ger_name": "Zapdos",
+    "pokemon_height": 1.6,
+    "pokemon_weight": 52.6,
+    "pokemon_flavor_text": "Ein Legendäres Vogel-Pokémon, das im Sturzflug aus den Wolken bricht und Blitze schleudert.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+    "typen": "Elektro, Flug"
+  },
+  {
+    "pokemon_id": 146,
+    "pokemon_api_name": "moltres",
+    "pokemon_ger_name": "Lavados",
+    "pokemon_height": 2,
+    "pokemon_weight": 60,
+    "pokemon_flavor_text": "Dieses Pokémon ist der Legendäre Feuervogel. Sein Flügelschlag entfacht ein helles Feuermeer.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+    "typen": "Feuer, Flug"
+  },
+  {
+    "pokemon_id": 147,
+    "pokemon_api_name": "dratini",
+    "pokemon_ger_name": "Dratini",
+    "pokemon_height": 1.8,
+    "pokemon_weight": 3.3,
+    "pokemon_flavor_text": "Man nennt es „Illusion-Pokémon“, denn nur wenige haben es gesehen. Nur seine Haut wurde oft gefunden.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+    "typen": "Drache"
+  },
+  {
+    "pokemon_id": 148,
+    "pokemon_api_name": "dragonair",
+    "pokemon_ger_name": "Dragonir",
+    "pokemon_height": 4,
+    "pokemon_weight": 16.5,
+    "pokemon_flavor_text": "Die kristallenen Bälle an seinem Schweif ermöglichen es ihm, das Wetter zu beeinflussen.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+    "typen": "Drache"
+  },
+  {
+    "pokemon_id": 149,
+    "pokemon_api_name": "dragonite",
+    "pokemon_ger_name": "Dragoran",
+    "pokemon_height": 2.2,
+    "pokemon_weight": 210,
+    "pokemon_flavor_text": "Trotz seines wuchtigen und massiven Körpers kann es fliegen. Es umrundet den Erdball in nur 16 Stunden.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+    "typen": "Drache, Flug"
+  },
+  {
+    "pokemon_id": 150,
+    "pokemon_api_name": "mewtwo",
+    "pokemon_ger_name": "Mewtu",
+    "pokemon_height": 2,
+    "pokemon_weight": 122,
+    "pokemon_flavor_text": "Dieses Pokémon ist das Resultat eines jahrelangen und skrupellosen Experimentes.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+    "typen": "Psycho"
+  },
+  {
+    "pokemon_id": 151,
+    "pokemon_api_name": "mew",
+    "pokemon_ger_name": "Mew",
+    "pokemon_height": 0.4,
+    "pokemon_weight": 4,
+    "pokemon_flavor_text": "Es beherrscht alle möglichen Attacken, daher sieht man in ihm den Vorfahren aller Pokémon.",
+    "pokemon_front_sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+    "typen": "Psycho"
+  }
+]
