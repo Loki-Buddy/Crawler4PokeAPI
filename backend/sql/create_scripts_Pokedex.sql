@@ -5,7 +5,8 @@ SET search_path TO "Pokedex";
 
 CREATE TABLE pokemon(
 	id SERIAL PRIMARY KEY,
-	name TEXT NOT NULL UNIQUE,
+	api_name TEXT NOT NULL UNIQUE,
+    ger_name TEXT NOT NULL UNIQUE,
 	height REAL,
 	weight REAL,
 	flavor_text TEXT,
@@ -14,7 +15,8 @@ CREATE TABLE pokemon(
 
 CREATE TABLE typ (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
+    api_name TEXT NOT NULL UNIQUE,
+    ger_name TEXT NOT NULL UNIQUE
 );
 
 -- Hilstabelle Pokemon <-> Typen
