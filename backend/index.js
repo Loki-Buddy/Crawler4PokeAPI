@@ -94,7 +94,7 @@ await sleep(5000);
 })();
 
 // Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern
-await sleep(5000);
+await sleep(20000);
 
 // Verknüpfen der Pokémon mit ihren Typen
 (async () => {
