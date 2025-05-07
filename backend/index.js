@@ -10,7 +10,7 @@ const pool = new Pool({
     host: process.env.DB_HOST,
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+    port: process.env.DB_PORT
 });
 
 const P = new Pokedex(); // Initialisierung der Pokedex-API
@@ -94,7 +94,7 @@ await sleep(5000);
 })();
 
 // Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern
-await sleep(5000);
+await sleep(10000);
 
 // Verknüpfen der Pokémon mit ihren Typen
 (async () => {
