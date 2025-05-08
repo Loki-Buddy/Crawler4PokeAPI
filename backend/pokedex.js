@@ -21,7 +21,6 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)); // Hilf
     try {
         const interval = { limit: 151, offset: 0 }; // Definieren des Bereichs für die ersten 151 Pokémon
         const allPokemon = await P.getPokemonsList(interval); // Abrufen der Pokémon-Liste
-
         for (let i = 0; i < 151; i++) {
             // Abrufen der Spezies-Daten eines Pokémon
             const original = await P.getPokemonSpeciesByName(allPokemon.results[i].name);

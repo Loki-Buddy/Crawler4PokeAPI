@@ -3,34 +3,29 @@ CREATE SCHEMA "BattleMechanic" AUTHORIZATION postgres;
 
 SET search_path TO "BattleMechanic";
 
---DROP TABLE IF EXISTS species;
---DROP TABLE IF EXISTS pokemon_stat;
---DROP TABLE IF EXISTS stat;
---DROP TABLE IF EXISTS pokemon_typ;
---DROP TABLE IF EXISTS typ;
---DROP TABLE IF EXISTS pokemon;
-
 -- Alle Monster
 CREATE TABLE pokemon (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
-	front_sprites BYTEA, -- Download
-	back_sprites BYTEA -- Download
+    api_name TEXT NOT NULL,
+    ger_name TEXT NOT NULL,
+	front_sprite BYTEA, -- Download
+	back_sprite BYTEA -- Download
 );
 
 -- Alle Typen
 CREATE TABLE typ (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
+    api_name TEXT NOT NULL UNIQUE,
+    ger_name TEXT NOT NULL UNIQUE
 );
 
 -- Hilstabelle Pokemon <-> Typen
 CREATE TABLE pokemon_typ (
     pokemon_id INTEGER REFERENCES pokemon(id),
     typ_id INTEGER REFERENCES typ(id),
-    typ_slot INTEGER, -- 1 = Haupttyp, 2 = Zweittyp
+    slot INTEGER, -- 1 = Haupttyp, 2 = Zweittyp
 	weekness_slot INTEGER, -- 1 = 1.Weekness, 2 = 2.Weekness ... usw.
-    PRIMARY KEY (pokemon_id, typ_id)
+    PRIMARY KEY (pokemon_id, typ_id, weekness_slot)
 );
 
 -- Alle Stats (HP, Attack, Defense und Speed)
@@ -52,10 +47,13 @@ CREATE TABLE pokemon_stat (
 -- move-category 0,1 und 4 (damage, ailment, damage+ailment)
 CREATE TABLE moves(
 	id SERIAL PRIMARY KEY,
-	name TEXT NOT NULL UNIQUE,
+	api_name TEXT NOT NULL UNIQUE,
+    ger_name TEXT NOT NULL UNIQUE,
 	move_category TEXT,
 	accuracy INTEGER,
 	effect_chance INTEGER,
+    dmg INTEGER,
+    ap INTEGER,
 	flavor_text TEXT
 );
 
