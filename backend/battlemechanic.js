@@ -123,7 +123,7 @@ const downloadBackGif = async (pokemonName) => {
 })();
 
 // Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern und um die API nicht zu überlassten
-await sleep(10000);
+await sleep(20000);
 
 // Verknüpfen der Pokémon mit ihren Typen
 (async () => {
@@ -143,7 +143,7 @@ await sleep(10000);
                 const db_typSlot1 = resultTyp.rows.find((typ) => typ.api_name === api_typSlot1);
                 const db_typSlot2 = api_typSlot2 ? resultTyp.rows.find((typ) => typ.api_name === api_typSlot2) : null;
 
-                await sleep(5000); // Verzögerung zwischen API-Anfragen
+                await sleep(500); // Verzögerung zwischen API-Anfragen
 
                 // Einfügen der Typ-Zuordnung in die Datenbank
                 await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2, $3);`, [i + 1, db_typSlot1.id, 1]); //Ohne den sleep funktioniert das nicht
