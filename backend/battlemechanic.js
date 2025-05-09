@@ -20,7 +20,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 // https://projectpokemon.org/images/normal-sprite/bulbasaur.gif
 // https://projectpokemon.org/images/sprites-models/normal-back/bulbasaur.gif
 
-/* const front_sprite_gif_url ='https://projectpokemon.org/images/normal-sprite/';
+const front_sprite_gif_url ='https://projectpokemon.org/images/normal-sprite/';
 const back_sprite_gif_url = 'https://projectpokemon.org/images/sprites-models/normal-back/'
 
 const downloadFrontGif = async (pokemonName) => {
@@ -58,16 +58,22 @@ const downloadBackGif = async (pokemonName) => {
             // Abrufen der Spezies-Daten eines Pokémon
             const original = await P.getPokemonSpeciesByName(allPokemon.results[i].name);
             const ger = original.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Pokémon
-
+            const this_pokemon = await P.getPokemonByName(allPokemon.results[i].name);
+            const cry_url = this_pokemon.cries.latest;
+            const hp = this_pokemon.stats[0].base_stat;
+            const attack = this_pokemon.stats[1].base_stat;
+            const defense = this_pokemon.stats[2].base_stat;
+            const speed = this_pokemon.stats[5].base_stat;
+            
             const client = await pool.connect(); // Verbindung zur Datenbank herstellen
             try {
                 await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
                 // Einfügen der Pokémon-Daten in die Datenbank
                 
                 await client.query(
-                    `INSERT INTO pokemon (api_name, ger_name, front_sprite, back_sprite)
-                            VALUES ($1, $2, $3, $4);`,
-                    [allPokemon.results[i].name, ger, downloadFrontGif(allPokemon.results[i].name), downloadBackGif(allPokemon.results[i].name)]
+                    `INSERT INTO pokemon (api_name, ger_name, front_sprite, back_sprite, cry_url, hp, attack, defense, speed)
+                            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`,
+                    [allPokemon.results[i].name, ger, downloadFrontGif(allPokemon.results[i].name), downloadBackGif(allPokemon.results[i].name), cry_url, hp, attack, defense, speed]
                 );
                 await sleep(500);
             } catch (error) {
@@ -79,13 +85,13 @@ const downloadBackGif = async (pokemonName) => {
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
     }
-})(); */
+})();
 
 // Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern
 //await sleep(5000);
 
 // Abrufen und Speichern der Pokémon-Typen
-/* (async () => {
+(async () => {
     try {
         const response = await P.getTypesList({ limit: 18, offset: 0 }); // Abrufen der Typen-Liste
         for (let i = 0; i < 18; i++) {
@@ -114,41 +120,48 @@ const downloadBackGif = async (pokemonName) => {
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten für die Tabelle "typ":', error); // Fehlerbehandlung
     }
-})(); */
-
-// Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern
-//await sleep(5000);
-
-// Abrufen und Speichern der Pokémon-Typen
-/* (async () => {
-    try {
-        const response = await P.getStatsList({ limit: 8, offset: 0 }); // Abrufen der Typen-Liste
-        for (let i = 0; i < 8; i++) {
-            const api_stat = response.results[i].name; // Name des Typs aus der API
-
-            if (api_stat === 'special-defense' || api_stat === 'special-attack' || api_stat === 'evasion') {
-                continue; // Überspringen des Stats "special-defense", "special-attack" und "evasion"
-            }
-
-            const client = await pool.connect(); // Verbindung zur Datenbank herstellen
-            try {
-                await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
-                // Einfügen der Typ-Daten in die Datenbank
-                await client.query(`INSERT INTO stat (name) VALUES ($1, $2);`, [api_stat]);
-            } catch (error) {
-                console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
-            } finally {
-                client.release(); // Freigeben der Datenbankverbindung
-            }
-        }
-    } catch (error) {
-        console.error('Fehler beim Abrufen der Pokémon-Daten die Tabelle "stat":', error); // Fehlerbehandlung
-    }
 })();
 
-await sleep(5000); */ // Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern und um die API nicht zu überlassten
+// Verzögerung, um der Datenbank Zeit zu geben die Daten abzuspeichern und um die API nicht zu überlassten
+await sleep(5000);
 
+// Verknüpfen der Pokémon mit ihren Typen
 (async () => {
+    try {
+        const allPokemon = await P.getPokemonsList({ limit: 151, offset: 0 }); // Abrufen der Pokémon-Liste
+        const client = await pool.connect(); // Verbindung zur Datenbank herstellen
+        try {
+            await client.query(`SET search_path TO "BattleMechanic";`); // Setzen des Schemas
+            const resultTyp = await client.query(`SELECT * FROM typ`); // Abrufen aller Typen aus der Datenbank
+
+            for (let i = 0; i < 151; i++) {
+                const pokemon = await P.getPokemonByName(allPokemon.results[i].name); // Abrufen der Pokémon-Daten
+                const api_typSlot1 = pokemon.types[0].type.name; // Erster Typ des Pokémon
+                const api_typSlot2 = pokemon.types[1] ? pokemon.types[1].type.name : null; // Zweiter Typ (falls vorhanden)
+
+                // Zuordnen der Typen aus der Datenbank
+                const db_typSlot1 = resultTyp.rows.find((typ) => typ.api_name === api_typSlot1);
+                const db_typSlot2 = api_typSlot2 ? resultTyp.rows.find((typ) => typ.api_name === api_typSlot2) : null;
+
+                await sleep(1000); // Verzögerung zwischen API-Anfragen
+
+                // Einfügen der Typ-Zuordnung in die Datenbank
+                await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2, $3);`, [i + 1, db_typSlot1.id, 1]); //Ohne den sleep funktioniert das nicht
+
+                if (db_typSlot2) {
+                    await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2 , $3);`, [i + 1, db_typSlot2.id, 2]);
+                }
+            }
+        } catch (error) {
+            console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
+        } finally {
+            client.release(); // Freigeben der Datenbankverbindung
+        }
+    } catch (error) {
+        console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
+    }
+})();
+/* (async () => {
     try {
         const response = await P.getMovesList({ limit: 1, offset: 0 }); // Abrufen der Move-Liste
 
@@ -170,6 +183,9 @@ await sleep(5000); */ // Verzögerung, um der Datenbank Zeit zu geben die Daten 
                 }
                 my_pokemon.push(detail_this_pokemon);
             }
+
+            
+            
             const ger_name = moveDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Moves
             const accuracy = moveDetails.accuracy; // Genauigkeit des Moves in Prozent
             const effect_chance = moveDetails.effect_chance; // Effektchance des Moves in Prozent
@@ -180,4 +196,4 @@ await sleep(5000); */ // Verzögerung, um der Datenbank Zeit zu geben die Daten 
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten!', error); // Fehlerbehandlung
     }
-})();
+})(); */

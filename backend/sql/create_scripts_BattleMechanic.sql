@@ -9,7 +9,12 @@ CREATE TABLE pokemon (
     api_name TEXT NOT NULL,
     ger_name TEXT NOT NULL,
 	front_sprite BYTEA, -- Download
-	back_sprite BYTEA -- Download
+	back_sprite BYTEA, -- Download
+    cry_url TEXT,
+    hp INTEGER,
+    attack INTEGER,
+    defense INTEGER,
+    speed INTEGER
 );
 
 -- Alle Typen
@@ -24,22 +29,15 @@ CREATE TABLE pokemon_typ (
     pokemon_id INTEGER REFERENCES pokemon(id),
     typ_id INTEGER REFERENCES typ(id),
     slot INTEGER, -- 1 = Haupttyp, 2 = Zweittyp
-	weekness_slot INTEGER, -- 1 = 1.Weekness, 2 = 2.Weekness ... usw.
-    PRIMARY KEY (pokemon_id, typ_id, weekness_slot)
+    PRIMARY KEY (pokemon_id, typ_id)
 );
 
--- Alle Stats (HP, Attack, Defense und Speed)
-CREATE TABLE stat (
-    id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE
-);
-
--- Hilfstabelle Pokémon <-> Stats
-CREATE TABLE pokemon_stat (
-    pokemon_id INTEGER REFERENCES pokemon(id),
-    stat_id INTEGER REFERENCES stat(id),
-    base_stat INTEGER,
-    PRIMARY KEY (pokemon_id, stat_id)
+--Hilfstabelle Pokemon_typ <-> Weekness_typ
+CREATE TABLE pokemon_weekness (
+    typ_id INTEGER REFERENCES typ(id),
+    weekness_typ_id INTEGER REFERENCES typ(id),
+    slot INTEGER,
+    PRIMARY KEY (typ_id, weekness_typ_id)
 );
 
 -- Alle Moves
