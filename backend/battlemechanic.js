@@ -20,7 +20,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 // https://projectpokemon.org/images/normal-sprite/bulbasaur.gif
 // https://projectpokemon.org/images/sprites-models/normal-back/bulbasaur.gif
 
-const front_sprite_gif_url ='https://projectpokemon.org/images/normal-sprite/';
+/* const front_sprite_gif_url ='https://projectpokemon.org/images/normal-sprite/';
 const back_sprite_gif_url = 'https://projectpokemon.org/images/sprites-models/normal-back/'
 
 const downloadFrontGif = async (pokemonName) => {
@@ -161,39 +161,114 @@ await sleep(20000);
         console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
     }
 })();
-/* (async () => {
-    try {
-        const response = await P.getMovesList({ limit: 1, offset: 0 }); // Abrufen der Move-Liste
 
-        for (let i = 0; i < response.results.length; i++) {
+//await sleep(5000);*/
+
+(async () => {
+    try {
+        const response = await P.getMovesList({ limit: 937, offset: 0 }); // Abrufen der Move-Liste
+
+        for (let i = 0; i < 937; i++) {
 
             const api_name = response.results[i].name; // Name des Moves aus der API
             const moveDetails = await P.getMoveByName(api_name); // Abrufen der Move-Details
-            const moveCategories = await P.getMoveCategoriesList();
-            await sleep(1000)
-            const learned_by_Pokemon = moveDetails.learned_by_pokemon;
-            let my_pokemon = [];
             
-            for(let j = 0; j < learned_by_Pokemon.length; j++){
-                const this_pokemon = await P.getPokemonByName(learned_by_Pokemon[j].name);
-                const detail_this_pokemon = await P.getPokemonSpeciesByName(this_pokemon.name);
+            const learned_by_Pokemon = moveDetails.learned_by_pokemon;
 
-                if(detail_this_pokemon.id > 151){
-                    break;
-                }
-                my_pokemon.push(detail_this_pokemon);
+            if (learned_by_Pokemon.length === 0) {
+                continue;
             }
 
-            
-            
-            const ger_name = moveDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Moves
-            const accuracy = moveDetails.accuracy; // Genauigkeit des Moves in Prozent
-            const effect_chance = moveDetails.effect_chance; // Effektchance des Moves in Prozent
-            const german_flavor_text = moveDetails.flavor_text_entries.filter((flavor_text) => flavor_text.language.name === 'de')[0].flavor_text; // Deutscher Flavor-Text des Moves
+            if (moveDetails.id > 163){
+                break;
+            }
 
+            const pokemon_firstIndex = await P.getPokemonByName(learned_by_Pokemon[0].name);
 
+            if ((pokemon_firstIndex.id < 152 && moveDetails.generation.name === 'generation-i') && (moveDetails.meta.category.name.includes('damage') || moveDetails.meta.category.name.includes('ailment'))) {
+                const ger_name = moveDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Moves
+                const german_flavor_text = moveDetails.flavor_text_entries.filter((flavor_text) => flavor_text.language.name === 'de')[0].flavor_text; // Deutscher Flavor-Text des Moves
+
+                const client = await pool.connect(); // Verbindung zur Datenbank herstellen
+                try {
+                    await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
+                    // Einfügen der Move-Daten in die Datenbank
+                    await client.query(
+                        `INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, category, dmg_class, dmg_power, dmg_typ, accuracy, effect_chance, pp, flavor_text)
+                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`,
+                        [
+                            api_name,
+                            ger_name,
+                            moveDetails.meta.ailment.name,
+                            moveDetails.meta.ailment_chance,
+                            moveDetails.meta.category.name,
+                            moveDetails.damage_class.name,
+                            moveDetails.power,
+                            moveDetails.type.name,
+                            moveDetails.accuracy,
+                            moveDetails.effect_chance,
+                            moveDetails.pp,
+                            german_flavor_text
+                        ]
+                    );
+
+                    console.log('Move wurder erfolgreich hinzugefügt: ' + ger_name + ' ' + moveDetails.id)
+
+                    //await sleep(500);
+                } catch (error) {
+                    console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
+                } finally {
+                    client.release(); // Freigeben der Datenbankverbindung
+                }
+            }
+        }
+
+        const client = await pool.connect(); // Verbindung zur Datenbank herstellen
+        try {
+            const moveDetails = await P.getMoveByName('transform');
+            const ger_name = moveDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name;
+            const german_flavor_text = moveDetails.flavor_text_entries.filter((flavor_text) => flavor_text.language.name === 'de')[0].flavor_text;
+
+            await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
+            await client.query(`INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, category, dmg_class, dmg_power, dmg_typ, accuracy, effect_chance, pp, flavor_text)
+                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`,
+                [
+                    moveDetails.name,
+                    ger_name,
+                    moveDetails.meta.ailment.name,
+                    moveDetails.meta.ailment_chance,
+                    moveDetails.meta.category.name,
+                    moveDetails.damage_class.name,
+                    moveDetails.power,
+                    moveDetails.type.name,
+                    moveDetails.accuracy,
+                    moveDetails.effect_chance,
+                    moveDetails.pp,
+                    german_flavor_text
+                ]
+            );
+        } catch (error) {
+            console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
+        } finally {
+            client.release(); // Freigeben der Datenbankverbindung
         }
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten!', error); // Fehlerbehandlung
     }
-})(); */
+})();
+
+await sleep(10000);
+
+(async () => {
+    try {
+        const response = await P.getPokemonsList({limit : 151, offset : 0});
+        const moves = [];
+
+        for (let i = 0; i < response.results.length; i++){
+            
+        }
+
+    } catch (error) {
+        console.error('Fehler beim Abrufen der Pokémon-Daten!', error); // Fehlerbehandlung
+    }
+})();
