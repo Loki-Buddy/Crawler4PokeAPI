@@ -16,6 +16,43 @@ const pool = new Pool({
 const P = new Pokedex(); // Initialisierung der Pokedex-API
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+function replaceUrlWithMath(key, arr) {
+    return arr.map(obj => {
+        switch (key) {
+            case 'double_damage_from':
+                return {
+                    name: obj.name,
+                    math: 2.0
+                };
+            case 'double_damage_to':
+                return {
+                    name: obj.name,
+                    math: 2.0
+                };
+            case 'half_damage_from':
+                return {
+                    name: obj.name,
+                    math: 0.5
+                };
+            case 'half_damage_to':
+                return {
+                    name: obj.name,
+                    math: 0.5
+                };
+            case 'no_damage_from':
+                return {
+                    name: obj.name,
+                    math: 0.0
+                };
+            case 'no_damage_to':
+                return {
+                    name: obj.name,
+                    math: 0.0
+                };
+        };
+    });
+}
+
 // Abrufen und Speichern der Pokémon-Typen
 (async () => {
     try {
@@ -25,17 +62,28 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
             if (api_typ === 'dark') {
                 console.log('Der Typ Dark wurde übersprungen!');
-                continue; // Überspringen des Typs "dark"
+                continue;
             }
 
             const typeDetails = await P.getTypeByName(api_typ); // Abrufen der Typdetails
             const ger_typ = typeDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Typs
+            const dmg_relations = typeDetails.damage_relations;
+            const keys = Object.keys(dmg_relations);
+
+            const newDmgRelations = {
+                double_damage_from: replaceUrlWithMath(keys[0], dmg_relations.double_damage_from),
+                double_damage_to: replaceUrlWithMath(keys[1], dmg_relations.double_damage_to),
+                half_damage_from: replaceUrlWithMath(keys[2], dmg_relations.half_damage_from),
+                half_damage_to: replaceUrlWithMath(keys[3], dmg_relations.half_damage_to),
+                no_damage_from: replaceUrlWithMath(keys[4], dmg_relations.no_damage_from),
+                no_damage_to: replaceUrlWithMath(keys[5], dmg_relations.no_damage_to)
+            };
 
             const client = await pool.connect(); // Verbindung zur Datenbank herstellen
             try {
                 await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
                 // Einfügen der Typ-Daten in die Datenbank
-                await client.query(`INSERT INTO typ (api_name, ger_name) VALUES ($1, $2);`, [api_typ, ger_typ]);
+                await client.query(`INSERT INTO typ (api_name, ger_name, dmg_relations) VALUES ($1, $2, $3);`, [api_typ, ger_typ, JSON.stringify(newDmgRelations)]);
 
                 console.log('Der Typ wurde erfolgreich gespeichert! Name: ' + ger_typ);
             } catch (error) {
@@ -76,11 +124,11 @@ await sleep(20000);
 
                 // Einfügen der Typ-Zuordnung in die Datenbank
                 await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2, $3);`, [i + 1, db_typSlot1.id, 1]); //Ohne den sleep funktioniert das nicht
-                console.log('Der Typ für den ersten Slot wurder erfolgreich gespeichert! Typ: ' + api_typSlot1 + ' Pokemon: ' + allPokemon.results[i].name);
+                console.log('Der Typ wurde erfolgreich gespeichert! Typ Slot 1: ' + api_typSlot1 + ' Pokemon: ' + allPokemon.results[i].name);
 
                 if (db_typSlot2) {
                     await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2 , $3);`, [i + 1, db_typSlot2.id, 2]);
-                    console.log('Der Typ für den zweiten Slot wurder erfolgreich gespeichert! Name: ' + api_typSlot2 + ' Pokemon: ' + allPokemon.results[i].name);
+                    console.log('Der Typ wurde erfolgreich gespeichert! Typ Slot 2: ' + api_typSlot2 + ' Pokemon: ' + allPokemon.results[i].name);
                 }
             }
         } catch (error) {

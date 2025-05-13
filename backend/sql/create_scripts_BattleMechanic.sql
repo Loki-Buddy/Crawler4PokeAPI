@@ -20,10 +20,11 @@ CREATE TABLE pokemon (
 );
 
 -- Alle Typen
-CREATE TABLE typ_dmg_relations (
+CREATE TABLE typ (
     id SERIAL PRIMARY KEY,
     api_name TEXT NOT NULL UNIQUE,
-    ger_name TEXT NOT NULL UNIQUE
+    ger_name TEXT NOT NULL UNIQUE,
+    dmg_relations JSONB
 );
 
 -- Hilstabelle Pokemon <-> Typen
@@ -35,11 +36,12 @@ CREATE TABLE pokemon_typ (
 );
 
 --Hilfstabelle Pokemon_typ <-> Weekness_typ
-CREATE TABLE pokemon_weekness (
+CREATE TABLE pokemon_week_strong (
+    id SERIAL,
     typ_id INTEGER REFERENCES typ(id),
-    weekness_typ_id INTEGER REFERENCES typ(id),
-    slot INTEGER,
-    PRIMARY KEY (typ_id, weekness_typ_id)
+    week TEXT[],
+    strong TEXT[],
+    PRIMARY KEY (id, typ_id)
 );
 
 -- Alle Moves
@@ -68,12 +70,4 @@ CREATE TABLE pokemon_moves (
 	pokemon_id INTEGER REFERENCES pokemon(id),
 	moves_arr INTEGER[],
     PRIMARY KEY (id, pokemon_id)
-);
-
--- Hilfstabelle Damage-Realtions
-CREATE TABLE dmg_relationen (
-    attacker_typ_id INTEGER REFERENCES typ(id),
-    defender_typ_id INTEGER REFERENCES typ(id),
-    damage_factor REAL CHECK (damage_factor IN (0.0, 0.5, 1.0, 2.0)),
-    PRIMARY KEY (attacker_typ_id, defender_typ_id)
 );

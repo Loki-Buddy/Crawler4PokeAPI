@@ -95,9 +95,9 @@ const downloadBackGif = async (pokemonName) => {
                 // Einfügen der Pokémon-Daten in die Datenbank
                 
                 await client.query(
-                    `INSERT INTO pokemon (api_name, ger_name, front_sprite, back_sprite, cry_url, hp, attack, defense, speed)
-                            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9);`,
-                    [allPokemon.results[i].name, ger, downloadFrontGif(allPokemon.results[i].name), downloadBackGif(allPokemon.results[i].name), cry_url, hp, attack, defense, speed]
+                    `INSERT INTO pokemon (api_name, ger_name, front_sprite, back_sprite, cry_url, hp, attack, special_attack, defense, special_defense, speed)
+                            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);`,
+                    [allPokemon.results[i].name, ger, downloadFrontGif(allPokemon.results[i].name), downloadBackGif(allPokemon.results[i].name), cry_url, hp, attack, special_attack, defense, special_defense, speed]
                 );
 
                 console.log('Pokemon wurde erfolgreich gespeichert! Name: '+ ger)
