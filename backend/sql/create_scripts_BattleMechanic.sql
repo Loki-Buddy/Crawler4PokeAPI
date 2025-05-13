@@ -47,19 +47,24 @@ CREATE TABLE moves(
 	id SERIAL PRIMARY KEY,
 	api_name TEXT NOT NULL UNIQUE,
     ger_name TEXT NOT NULL UNIQUE,
-	move_category TEXT,
-	accuracy INTEGER,
-	effect_chance INTEGER,
-    dmg INTEGER,
-    ap INTEGER,
-	flavor_text TEXT
+    ailment TEXT,
+    ailment_chance INT,
+    move_category TEXT,
+    dmg_class TEXT,
+    dmg_power INT,
+    dmg_typ TEXT,
+    accuracy INT,
+    effect_chance INT,
+    pp INT,
+    flavor_text TEXT
 );
 
 -- Hilfstabelle Pokemon <-> Moves
 CREATE TABLE pokemon_moves (
+    id SERIAL,
 	pokemon_id INTEGER REFERENCES pokemon(id),
-	move_id INTEGER REFERENCES moves(id),
-	PRIMARY KEY (pokemon_id, move_id)
+	moves_arr INTEGER[],
+    PRIMARY KEY (id, pokemon_id)
 );
 
 -- Hilfstabelle Damage-Realtions
