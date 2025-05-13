@@ -13,12 +13,14 @@ CREATE TABLE pokemon (
     cry_url TEXT,
     hp INTEGER,
     attack INTEGER,
+    special_attack INTEGER,
     defense INTEGER,
+    special_defense INTEGER,
     speed INTEGER
 );
 
 -- Alle Typen
-CREATE TABLE typ (
+CREATE TABLE typ_dmg_relations (
     id SERIAL PRIMARY KEY,
     api_name TEXT NOT NULL UNIQUE,
     ger_name TEXT NOT NULL UNIQUE
@@ -48,14 +50,15 @@ CREATE TABLE moves(
 	api_name TEXT NOT NULL UNIQUE,
     ger_name TEXT NOT NULL UNIQUE,
     ailment TEXT,
-    ailment_chance INT,
+    ailment_chance INTEGER,
     move_category TEXT,
     dmg_class TEXT,
-    dmg_power INT,
+    dmg_power INTEGER,
     dmg_typ TEXT,
-    accuracy INT,
-    effect_chance INT,
-    pp INT,
+    stat_changes JSONB,
+    accuracy INTEGER,
+    effect_chance INTEGER,
+    pp INTEGER,
     flavor_text TEXT
 );
 

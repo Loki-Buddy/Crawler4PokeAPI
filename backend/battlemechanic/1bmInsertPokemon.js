@@ -25,7 +25,18 @@ const back_sprite_gif_url = 'https://projectpokemon.org/images/sprites-models/no
 
 const downloadFrontGif = async (pokemonName) => {
     try {
-        const gifUrl_front = `${front_sprite_gif_url}${pokemonName}.gif`;
+        let gifUrl_front;
+
+        if (pokemonName === 'nidoran-f') {
+            gifUrl_front = `${front_sprite_gif_url}nidoran_f.gif`;
+        } else if (pokemonName === 'nidoran-m') {
+            gifUrl_front = `${front_sprite_gif_url}nidoran_m.gif`;
+        } else if (pokemonName === 'mr-mime') {
+            gifUrl_front = `${front_sprite_gif_url}mr.mime.gif`;
+        } else {
+            gifUrl_front = `${front_sprite_gif_url}${pokemonName}.gif`;
+        }
+        
         const response = await axios.get(gifUrl_front, { responseType: 'arraybuffer' });
         const gifBuffer = Buffer.from(response.data);
 
@@ -39,7 +50,18 @@ const downloadFrontGif = async (pokemonName) => {
 
 const downloadBackGif = async (pokemonName) => {
     try {
-        const gifUrl_back = `${back_sprite_gif_url}${pokemonName}.gif`;
+        let gifUrl_back;
+
+        if (pokemonName === 'nidoran-f') {
+            gifUrl_back = `${back_sprite_gif_url}nidoran_f.gif`;
+        } else if (pokemonName === 'nidoran-m') {
+            gifUrl_back = `${back_sprite_gif_url}nidoran_m.gif`;
+        } else if (pokemonName === 'mr-mime') {
+            gifUrl_back = `${back_sprite_gif_url}mr._mime.gif`;
+        } else {
+            gifUrl_back = `${back_sprite_gif_url}${pokemonName}.gif`;
+        }
+        
         const response = await axios.get(gifUrl_back, { responseType: 'arraybuffer' });
         const gifBuffer = Buffer.from(response.data);
 
@@ -62,7 +84,9 @@ const downloadBackGif = async (pokemonName) => {
             const cry_url = this_pokemon.cries.latest;
             const hp = this_pokemon.stats[0].base_stat;
             const attack = this_pokemon.stats[1].base_stat;
+            const special_attack = this_pokemon.stats[3].base_stat;
             const defense = this_pokemon.stats[2].base_stat;
+            const special_defense = this_pokemon.stats[4].base_stat;
             const speed = this_pokemon.stats[5].base_stat;
             
             const client = await pool.connect(); // Verbindung zur Datenbank herstellen
@@ -78,7 +102,7 @@ const downloadBackGif = async (pokemonName) => {
 
                 console.log('Pokemon wurde erfolgreich gespeichert! Name: '+ ger)
                 
-                await sleep(500);
+                //await sleep(500);
             } catch (error) {
                 console.error('Fehler beim Abrufen der Pokémon-Daten die Tabelle "pokemon":', error); // Fehlerbehandlung
             } finally {

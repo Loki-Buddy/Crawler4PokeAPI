@@ -76,11 +76,11 @@ await sleep(20000);
 
                 // Einfügen der Typ-Zuordnung in die Datenbank
                 await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2, $3);`, [i + 1, db_typSlot1.id, 1]); //Ohne den sleep funktioniert das nicht
-                console.log('Der Typ für den ersten Slot wurder erfolgreich gespeichert! Name: ' + api_typSlot1);
+                console.log('Der Typ für den ersten Slot wurder erfolgreich gespeichert! Typ: ' + api_typSlot1 + ' Pokemon: ' + allPokemon.results[i].name);
 
                 if (db_typSlot2) {
                     await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2 , $3);`, [i + 1, db_typSlot2.id, 2]);
-                    console.log('Der Typ für den zweiten Slot wurder erfolgreich gespeichert! Name: ' + api_typSlot2);
+                    console.log('Der Typ für den zweiten Slot wurder erfolgreich gespeichert! Name: ' + api_typSlot2 + ' Pokemon: ' + allPokemon.results[i].name);
                 }
             }
         } catch (error) {

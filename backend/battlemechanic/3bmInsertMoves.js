@@ -37,17 +37,16 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
             const pokemon_firstIndex = await P.getPokemonByName(learned_by_Pokemon[0].name);
 
-            if ((pokemon_firstIndex.id < 152 && moveDetails.generation.name === 'generation-i') && (moveDetails.meta.category.name.includes('damage') || moveDetails.meta.category.name.includes('ailment'))) {
+            if ((pokemon_firstIndex.id < 152 && moveDetails.generation.name === 'generation-i') && (moveDetails.meta.category.name.includes('damage') || moveDetails.meta.category.name.includes('ailment') || moveDetails.meta.category.name.includes('net-good-stats'))) {
                 const ger_name = moveDetails.names.filter((pokeAPIName) => pokeAPIName.language.name === 'de')[0].name; // Deutscher Name des Moves
                 const german_flavor_text = moveDetails.flavor_text_entries.filter((flavor_text) => flavor_text.language.name === 'de')[0].flavor_text; // Deutscher Flavor-Text des Moves
-
                 const client = await pool.connect(); // Verbindung zur Datenbank herstellen
                 try {
                     await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
                     // Einfügen der Move-Daten in die Datenbank
                     await client.query(
-                        `INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, move_category, dmg_class, dmg_power, dmg_typ, accuracy, effect_chance, pp, flavor_text)
-                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`,
+                        `INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, move_category, dmg_class, dmg_power, dmg_typ, stat_changes, accuracy, effect_chance, pp, flavor_text)
+                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);`,
                         [
                             api_name,
                             ger_name,
@@ -57,6 +56,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                             moveDetails.damage_class.name,
                             moveDetails.power,
                             moveDetails.type.name,
+                            JSON.stringify(moveDetails.stat_changes),
                             moveDetails.accuracy,
                             moveDetails.effect_chance,
                             moveDetails.pp,
@@ -64,7 +64,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                         ]
                     );
 
-                    console.log('Move wurder erfolgreich hinzugefügt: ' + ger_name + ' ' + moveDetails.id)
+                    console.log('Move wurder erfolgreich hinzugefügt: ' + ger_name + ' ' + moveDetails.id);
 
                     //await sleep(500);
                 } catch (error) {
@@ -82,8 +82,10 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             const german_flavor_text = moveDetails.flavor_text_entries.filter((flavor_text) => flavor_text.language.name === 'de')[0].flavor_text;
 
             await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
-            await client.query(`INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, move_category, dmg_class, dmg_power, dmg_typ, accuracy, effect_chance, pp, flavor_text)
-                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12);`,
+            // Einfügen der Move-Daten in die Datenbank
+            await client.query(
+                `INSERT INTO moves (api_name, ger_name, ailment, ailment_chance, move_category, dmg_class, dmg_power, dmg_typ, stat_changes, accuracy, effect_chance, pp, flavor_text)
+                                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13);`,
                 [
                     moveDetails.name,
                     ger_name,
@@ -93,12 +95,14 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                     moveDetails.damage_class.name,
                     moveDetails.power,
                     moveDetails.type.name,
+                    JSON.stringify(moveDetails.stat_changes),
                     moveDetails.accuracy,
                     moveDetails.effect_chance,
                     moveDetails.pp,
                     german_flavor_text
                 ]
             );
+
         } catch (error) {
             console.error('Fehler beim Abrufen der Pokémon-Daten:', error); // Fehlerbehandlung
         } finally {

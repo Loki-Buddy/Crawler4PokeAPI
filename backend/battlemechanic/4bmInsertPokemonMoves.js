@@ -28,7 +28,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             for (let j = 0; j < moves.length; j++) {
                 const this_move = await P.getMoveByName(moves[j].move.name);
                 
-                if (this_move.id <= 163 && (this_move.meta.category.name.includes('damage') || this_move.meta.category.name.includes('ailment'))) {
+                if (this_move.id <= 163 && (this_move.meta.category.name.includes('damage') || this_move.meta.category.name.includes('ailment') || this_move.meta.category.name.includes('net-good-stats'))) {
                     let array_conter = 0;
                     const client = await pool.connect();
                     await sleep(500);
@@ -36,11 +36,10 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                         await client.query(`SET search_path TO "BattleMechanic";`);
                         const db_move_id = await client.query(`SELECT id FROM moves WHERE api_name = $1;`, [this_move.name]);
                         
-                        /* await sleep(500);
-                        moves_arr.push(db_move_id.rows[0].id); */
+                        //await sleep(500);
+                        moves_arr.push(db_move_id.rows[0].id);
 
-                        console.log('ID des Moves wurde erfolgreich ins array geschoben! id:' + moves_arr[array_conter]);
-                        array_conter++;
+                        console.log('ID des Moves wurde erfolgreich ins array geschoben!'+ db_move_id.rows[0].id);
                     } catch (error) {
                         console.error('Fehler! :', error);
                     } finally {
