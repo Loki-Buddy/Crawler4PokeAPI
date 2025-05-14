@@ -83,7 +83,7 @@ function replaceUrlWithMath(key, arr) {
             try {
                 await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
                 // Einfügen der Typ-Daten in die Datenbank
-                await client.query(`INSERT INTO typ (api_name, ger_name, dmg_relations) VALUES ($1, $2, $3);`, [api_typ, ger_typ, JSON.stringify(newDmgRelations)]);
+                await client.query(`INSERT INTO typ (api_name, ger_name, dmg_relations, sprites) VALUES ($1, $2, $3, $4);`, [api_typ, ger_typ, JSON.stringify(newDmgRelations), typeDetails.sprites['generation-viii']['sword-shield'].name_icon]);
 
                 console.log('Der Typ wurde erfolgreich gespeichert! Name: ' + ger_typ);
             } catch (error) {

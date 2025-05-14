@@ -24,19 +24,18 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             const this_pokemon = await P.getPokemonByName(response.results[i].name);
             const moves = this_pokemon.moves;
             const moves_arr = [];
+            console.log('Pokemon: ' + response.results[i].name);
 
             for (let j = 0; j < moves.length; j++) {
                 const this_move = await P.getMoveByName(moves[j].move.name);
                 
                 if (this_move.id <= 163 && (this_move.meta.category.name.includes('damage') || this_move.meta.category.name.includes('ailment') || this_move.meta.category.name.includes('net-good-stats'))) {
-                    let array_conter = 0;
                     const client = await pool.connect();
                     await sleep(500);
                     try {
                         await client.query(`SET search_path TO "BattleMechanic";`);
                         const db_move_id = await client.query(`SELECT id FROM moves WHERE api_name = $1;`, [this_move.name]);
                         
-                        //await sleep(500);
                         moves_arr.push(db_move_id.rows[0].id);
 
                         console.log('ID des Moves wurde erfolgreich ins array geschoben!'+ db_move_id.rows[0].id);
@@ -57,8 +56,6 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
                 client.release();
             }
         }
-
-
     } catch (error) {
         console.error('Fehler beim Abrufen der Pokémon-Daten!', error); // Fehlerbehandlung
     }
