@@ -35,19 +35,15 @@ CREATE TABLE pokemon_typ (
     PRIMARY KEY (pokemon_id, typ_id)
 );
 
---Hilfstabelle Pokemon_typ <-> Weekness_typ
+-- Tabelle für die Schwäche, Stärke und Imunität aller einzelnen Pokemon
 CREATE TABLE pokemon_weak_strong_immune (
-    id SERIAL,
-    typ_id INTEGER REFERENCES typ(id),
+    pokemon_id INTEGER PRIMARY KEY REFERENCES pokemon(id),
     weak TEXT[],
     strong TEXT[],
-    immune TEXT[],
-    PRIMARY KEY (id, typ_id)
+    immune TEXT[]
 );
 
--- Alle Moves
--- (insert WHERE learned_by_pokemon => pokemon_id <= 151)
--- move-category 0,1 und 4 (damage, ailment, damage+ailment)
+--Alle Moves
 CREATE TABLE moves(
 	id SERIAL PRIMARY KEY,
 	api_name TEXT NOT NULL UNIQUE,
@@ -65,10 +61,8 @@ CREATE TABLE moves(
     flavor_text TEXT
 );
 
--- Hilfstabelle Pokemon <-> Moves
+--Tabelle für die jedes einzelenes Pokemon
 CREATE TABLE pokemon_moves (
-    id SERIAL,
-	pokemon_id INTEGER REFERENCES pokemon(id),
-	moves_arr INTEGER[],
-    PRIMARY KEY (id, pokemon_id)
+	pokemon_id INTEGER PRIMARY KEY REFERENCES pokemon(id),
+	moves_arr INTEGER[]
 );
