@@ -24,7 +24,8 @@ CREATE TABLE typ (
     id SERIAL PRIMARY KEY,
     api_name TEXT NOT NULL UNIQUE,
     ger_name TEXT NOT NULL UNIQUE,
-    dmg_relations JSONB
+    dmg_relations JSONB,
+    sprites TEXT
 );
 
 -- Hilstabelle Pokemon <-> Typen
