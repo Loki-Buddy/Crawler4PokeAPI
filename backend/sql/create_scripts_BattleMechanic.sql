@@ -36,10 +36,10 @@ CREATE TABLE pokemon_typ (
 );
 
 --Hilfstabelle Pokemon_typ <-> Weekness_typ
-CREATE TABLE pokemon_week_strong (
+CREATE TABLE pokemon_weak_strong (
     id SERIAL,
     typ_id INTEGER REFERENCES typ(id),
-    week TEXT[],
+    weak TEXT[],
     strong TEXT[],
     PRIMARY KEY (id, typ_id)
 );
