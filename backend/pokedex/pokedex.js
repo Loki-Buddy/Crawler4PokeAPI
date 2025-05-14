@@ -10,7 +10,7 @@ const pool = new Pool({
     host: process.env.DB_HOST,
     database: process.env.DB_NAME,
     password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
+    port: process.env.DB_PORT
 });
 
 const P = new Pokedex(); // Initialisierung der Pokedex-API
@@ -21,7 +21,6 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms)); // Hilf
     try {
         const interval = { limit: 151, offset: 0 }; // Definieren des Bereichs für die ersten 151 Pokémon
         const allPokemon = await P.getPokemonsList(interval); // Abrufen der Pokémon-Liste
-
         for (let i = 0; i < 151; i++) {
             // Abrufen der Spezies-Daten eines Pokémon
             const original = await P.getPokemonSpeciesByName(allPokemon.results[i].name);
@@ -105,7 +104,7 @@ await sleep(20000);
             await client.query(`SET search_path TO "Pokedex";`); // Setzen des Schemas
             const resultTyp = await client.query(`SELECT * FROM typ`); // Abrufen aller Typen aus der Datenbank
 
-            for (let i = 0; i < 151; i++) {
+            for (let i = 0; i < allPokemon.results.length; i++) {
                 const pokemon = await P.getPokemonByName(allPokemon.results[i].name); // Abrufen der Pokémon-Daten
                 const api_typSlot1 = pokemon.types[0].type.name; // Erster Typ des Pokémon
                 const api_typSlot2 = pokemon.types[1] ? pokemon.types[1].type.name : null; // Zweiter Typ (falls vorhanden)
@@ -114,7 +113,7 @@ await sleep(20000);
                 const db_typSlot1 = resultTyp.rows.find((typ) => typ.api_name === api_typSlot1);
                 const db_typSlot2 = api_typSlot2 ? resultTyp.rows.find((typ) => typ.api_name === api_typSlot2) : null;
 
-                await sleep(1000); // Verzögerung zwischen API-Anfragen
+                await sleep(5000); // Verzögerung zwischen API-Anfragen
 
                 // Einfügen der Typ-Zuordnung in die Datenbank
                 await client.query(`INSERT INTO pokemon_typ (pokemon_id, typ_id, slot) VALUES ($1, $2, $3);`, [i + 1, db_typSlot1.id, 1]); //Ohne den sleep funktioniert das nicht
