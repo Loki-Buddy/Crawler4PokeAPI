@@ -43,6 +43,7 @@ const downloadFrontGif = async (pokemonName) => {
         if (!gifBuffer) {
             return null;
         }
+        return gifBuffer;
     } catch (error) {
         console.error(`${pokemonName} Fehler beim Download der Datei!`);
     }
@@ -68,6 +69,7 @@ const downloadBackGif = async (pokemonName) => {
         if (!gifBuffer) {
             return null;
         }
+        return gifBuffer;
     } catch (error) {
         console.error(pokemonName + ' ' +'Fehler beim Download der Datei!');
     }
@@ -94,10 +96,13 @@ const downloadBackGif = async (pokemonName) => {
                 await client.query('SET search_path TO "BattleMechanic";'); // Setzen des Schemas
                 // Einfügen der Pokémon-Daten in die Datenbank
                 
+                const frontGif = await downloadFrontGif(allPokemon.results[i].name);
+                const backGif = await downloadBackGif(allPokemon.results[i].name);
+
                 await client.query(
                     `INSERT INTO pokemon (api_name, ger_name, front_sprite, back_sprite, cry_url, hp, attack, special_attack, defense, special_defense, speed)
                             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11);`,
-                    [allPokemon.results[i].name, ger, downloadFrontGif(allPokemon.results[i].name), downloadBackGif(allPokemon.results[i].name), cry_url, hp, attack, special_attack, defense, special_defense, speed]
+                    [allPokemon.results[i].name, ger, frontGif, backGif, cry_url, hp, attack, special_attack, defense, special_defense, speed]
                 );
 
                 console.log('Pokemon wurde erfolgreich gespeichert! Name: '+ ger)
